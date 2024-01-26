@@ -1,4 +1,86 @@
 {
+    "auth": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/config/auth-config",
+        "$ref": "#/$defs/AuthConfig",
+        "$defs": {
+            "AttributeMap": {
+                "type": "object"
+            },
+            "AuthConfig": {
+                "properties": {
+                    "handlers": {
+                        "items": {
+                            "$ref": "#/$defs/AuthHandlerConfig"
+                        },
+                        "type": "array"
+                    },
+                    "tls_auth_entities": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "external_auth_config": {
+                        "$ref": "#/$defs/ExternalAuthConfig"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "AuthHandlerConfig": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "config": {
+                        "$ref": "#/$defs/AttributeMap"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "type",
+                    "config"
+                ]
+            },
+            "ExternalAuthConfig": {
+                "properties": {
+                    "jwks": {
+                        "$ref": "#/$defs/AttributeMap"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "jwks"
+                ]
+            }
+        }
+    },
+    "component-arm-eva": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/arm/eva/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "token": {
+                        "type": "string"
+                    },
+                    "host": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "token",
+                    "host"
+                ]
+            }
+        }
+    },
     "component-arm-fake": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$id": "https://go.viam.com/rdk/components/arm/fake/config",
@@ -245,12 +327,10 @@
             "Config": {
                 "properties": {
                     "width_mm": {
-                        "type": "integer",
-			            "editor": "slider"
+                        "type": "integer"
                     },
                     "wheel_circumference_mm": {
-                        "type": "integer",
-			            "editor": "slider"
+                        "type": "integer"
                     },
                     "spin_slip_factor": {
                         "type": "number"
@@ -1401,19 +1481,24 @@
             "BrownConrady": {
                 "properties": {
                     "rk1": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     },
                     "rk2": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     },
                     "rk3": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     },
                     "tp1": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     },
                     "tp2": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     }
                 },
                 "additionalProperties": false,
@@ -1429,28 +1514,35 @@
             "Config": {
                 "properties": {
                     "intrinsic_parameters": {
-                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                        "$ref": "#/$defs/PinholeCameraIntrinsics",
+                        "description": "\"undefined\""
                     },
                     "distortion_parameters": {
-                        "$ref": "#/$defs/BrownConrady"
+                        "$ref": "#/$defs/BrownConrady",
+                        "description": "\"undefined\""
                     },
                     "debug": {
-                        "type": "boolean"
+                        "type": "boolean",
+                        "description": "\"boolean\""
                     },
                     "video_path": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "\"string\""
                     },
                     "input_kw_args": {
-                        "type": "object"
+                        "type": "object",
+                        "description": "\"object\""
                     },
                     "filters": {
                         "items": {
                             "$ref": "#/$defs/FilterConfig"
                         },
-                        "type": "array"
+                        "type": "array",
+                        "description": "\"array\" of type \"object\""
                     },
                     "output_kw_args": {
-                        "type": "object"
+                        "type": "object",
+                        "description": "\"object\""
                     }
                 },
                 "additionalProperties": false,
@@ -1462,16 +1554,19 @@
             "FilterConfig": {
                 "properties": {
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "\"string\""
                     },
                     "args": {
                         "items": {
                             "type": "string"
                         },
-                        "type": "array"
+                        "type": "array",
+                        "description": "\"array\" of type \"string\""
                     },
                     "kw_args": {
-                        "type": "object"
+                        "type": "object",
+                        "description": "\"object\""
                     }
                 },
                 "additionalProperties": false,
@@ -1485,22 +1580,28 @@
             "PinholeCameraIntrinsics": {
                 "properties": {
                     "width_px": {
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "\"integer\""
                     },
                     "height_px": {
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "\"integer\""
                     },
                     "fx": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     },
                     "fy": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     },
                     "ppx": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     },
                     "ppy": {
-                        "type": "number"
+                        "type": "number",
+                        "description": "\"number\""
                     }
                 },
                 "additionalProperties": false,
@@ -4379,5 +4480,631 @@
                 ]
             }
         }
+    },
+    "network": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/config/network-config",
+        "$ref": "#/$defs/NetworkConfig",
+        "$defs": {
+            "NetworkConfig": {
+                "properties": {
+                    "fqdn": {
+                        "type": "string"
+                    },
+                    "bind_address": {
+                        "type": "string"
+                    },
+                    "tls_cert_file": {
+                        "type": "string"
+                    },
+                    "tls_key_file": {
+                        "type": "string"
+                    },
+                    "sessions": {
+                        "$ref": "#/$defs/SessionsConfig"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "sessions"
+                ]
+            },
+            "SessionsConfig": {
+                "properties": {
+                    "HeartbeatWindow": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "HeartbeatWindow"
+                ]
+            }
+        }
+    },
+    "processes": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$defs": {
+            "ProcessConfig": {
+                "properties": {
+                    "ID": {
+                        "type": "string"
+                    },
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Args": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "CWD": {
+                        "type": "string"
+                    },
+                    "OneShot": {
+                        "type": "boolean"
+                    },
+                    "Username": {
+                        "type": "string"
+                    },
+                    "Environment": {
+                        "patternProperties": {
+                            ".*": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "Log": {
+                        "type": "boolean"
+                    },
+                    "LogWriter": true,
+                    "StopSignal": {
+                        "type": "integer"
+                    },
+                    "StopTimeout": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "ID",
+                    "Name",
+                    "Args",
+                    "CWD",
+                    "OneShot",
+                    "Username",
+                    "Environment",
+                    "Log",
+                    "LogWriter",
+                    "StopSignal",
+                    "StopTimeout"
+                ]
+            }
+        },
+        "items": {
+            "$ref": "#/$defs/ProcessConfig"
+        },
+        "type": "array"
+    },
+    "remotes": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$defs": {
+            "API": {
+                "properties": {
+                    "Type": {
+                        "$ref": "#/$defs/APIType"
+                    },
+                    "subtype": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "Type",
+                    "subtype"
+                ]
+            },
+            "APIType": {
+                "properties": {
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "namespace",
+                    "type"
+                ]
+            },
+            "AssociatedResourceConfig": {
+                "properties": {
+                    "API": {
+                        "$ref": "#/$defs/API"
+                    },
+                    "Attributes": {
+                        "$ref": "#/$defs/AttributeMap"
+                    },
+                    "ConvertedAttributes": true,
+                    "RemoteName": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "API",
+                    "Attributes",
+                    "ConvertedAttributes",
+                    "RemoteName"
+                ]
+            },
+            "AttributeMap": {
+                "type": "object"
+            },
+            "Credentials": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "payload": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "type",
+                    "payload"
+                ]
+            },
+            "GeometryConfig": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "x": {
+                        "type": "number"
+                    },
+                    "y": {
+                        "type": "number"
+                    },
+                    "z": {
+                        "type": "number"
+                    },
+                    "r": {
+                        "type": "number"
+                    },
+                    "l": {
+                        "type": "number"
+                    },
+                    "translation": {
+                        "$ref": "#/$defs/Vector"
+                    },
+                    "orientation": {
+                        "$ref": "#/$defs/OrientationConfig"
+                    },
+                    "Label": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "type",
+                    "x",
+                    "y",
+                    "z",
+                    "r",
+                    "l",
+                    "Label"
+                ]
+            },
+            "LinkConfig": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "translation": {
+                        "$ref": "#/$defs/Vector"
+                    },
+                    "orientation": {
+                        "$ref": "#/$defs/OrientationConfig"
+                    },
+                    "geometry": {
+                        "$ref": "#/$defs/GeometryConfig"
+                    },
+                    "parent": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "id",
+                    "translation",
+                    "orientation"
+                ]
+            },
+            "OrientationConfig": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "value": true
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "type"
+                ]
+            },
+            "Remote": {
+                "properties": {
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Frame": {
+                        "$ref": "#/$defs/LinkConfig"
+                    },
+                    "Auth": {
+                        "$ref": "#/$defs/RemoteAuth"
+                    },
+                    "ManagedBy": {
+                        "type": "string"
+                    },
+                    "Insecure": {
+                        "type": "boolean"
+                    },
+                    "ConnectionCheckInterval": {
+                        "type": "integer"
+                    },
+                    "ReconnectInterval": {
+                        "type": "integer"
+                    },
+                    "AssociatedResourceConfigs": {
+                        "items": {
+                            "$ref": "#/$defs/AssociatedResourceConfig"
+                        },
+                        "type": "array"
+                    },
+                    "Secret": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "Name",
+                    "Address",
+                    "Frame",
+                    "Auth",
+                    "ManagedBy",
+                    "Insecure",
+                    "ConnectionCheckInterval",
+                    "ReconnectInterval",
+                    "AssociatedResourceConfigs",
+                    "Secret"
+                ]
+            },
+            "RemoteAuth": {
+                "properties": {
+                    "credentials": {
+                        "$ref": "#/$defs/Credentials"
+                    },
+                    "entity": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "credentials",
+                    "entity"
+                ]
+            },
+            "Vector": {
+                "properties": {
+                    "X": {
+                        "type": "number"
+                    },
+                    "Y": {
+                        "type": "number"
+                    },
+                    "Z": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "X",
+                    "Y",
+                    "Z"
+                ]
+            }
+        },
+        "items": {
+            "$ref": "#/$defs/Remote"
+        },
+        "type": "array"
+    },
+    "services": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$defs": {
+            "API": {
+                "properties": {
+                    "Type": {
+                        "$ref": "#/$defs/APIType"
+                    },
+                    "subtype": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "Type",
+                    "subtype"
+                ]
+            },
+            "APIType": {
+                "properties": {
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "namespace",
+                    "type"
+                ]
+            },
+            "AssociatedResourceConfig": {
+                "properties": {
+                    "API": {
+                        "$ref": "#/$defs/API"
+                    },
+                    "Attributes": {
+                        "$ref": "#/$defs/AttributeMap"
+                    },
+                    "ConvertedAttributes": true,
+                    "RemoteName": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "API",
+                    "Attributes",
+                    "ConvertedAttributes",
+                    "RemoteName"
+                ]
+            },
+            "AttributeMap": {
+                "type": "object"
+            },
+            "Config": {
+                "properties": {
+                    "Name": {
+                        "type": "string"
+                    },
+                    "API": {
+                        "$ref": "#/$defs/API"
+                    },
+                    "Model": {
+                        "$ref": "#/$defs/Model"
+                    },
+                    "Frame": {
+                        "$ref": "#/$defs/LinkConfig"
+                    },
+                    "DependsOn": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "LogConfiguration": {
+                        "$ref": "#/$defs/LogConfig"
+                    },
+                    "AssociatedResourceConfigs": {
+                        "items": {
+                            "$ref": "#/$defs/AssociatedResourceConfig"
+                        },
+                        "type": "array"
+                    },
+                    "Attributes": {
+                        "$ref": "#/$defs/AttributeMap"
+                    },
+                    "ConvertedAttributes": true,
+                    "ImplicitDependsOn": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "Name",
+                    "API",
+                    "Model",
+                    "Frame",
+                    "DependsOn",
+                    "LogConfiguration",
+                    "AssociatedResourceConfigs",
+                    "Attributes",
+                    "ConvertedAttributes",
+                    "ImplicitDependsOn"
+                ]
+            },
+            "GeometryConfig": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "x": {
+                        "type": "number"
+                    },
+                    "y": {
+                        "type": "number"
+                    },
+                    "z": {
+                        "type": "number"
+                    },
+                    "r": {
+                        "type": "number"
+                    },
+                    "l": {
+                        "type": "number"
+                    },
+                    "translation": {
+                        "$ref": "#/$defs/Vector"
+                    },
+                    "orientation": {
+                        "$ref": "#/$defs/OrientationConfig"
+                    },
+                    "Label": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "type",
+                    "x",
+                    "y",
+                    "z",
+                    "r",
+                    "l",
+                    "Label"
+                ]
+            },
+            "LinkConfig": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "translation": {
+                        "$ref": "#/$defs/Vector"
+                    },
+                    "orientation": {
+                        "$ref": "#/$defs/OrientationConfig"
+                    },
+                    "geometry": {
+                        "$ref": "#/$defs/GeometryConfig"
+                    },
+                    "parent": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "id",
+                    "translation",
+                    "orientation"
+                ]
+            },
+            "LogConfig": {
+                "properties": {
+                    "level": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "level"
+                ]
+            },
+            "Model": {
+                "properties": {
+                    "Family": {
+                        "$ref": "#/$defs/ModelFamily"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "Family",
+                    "name"
+                ]
+            },
+            "ModelFamily": {
+                "properties": {
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "model_family": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "namespace",
+                    "model_family"
+                ]
+            },
+            "OrientationConfig": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "value": true
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "type"
+                ]
+            },
+            "Vector": {
+                "properties": {
+                    "X": {
+                        "type": "number"
+                    },
+                    "Y": {
+                        "type": "number"
+                    },
+                    "Z": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "X",
+                    "Y",
+                    "Z"
+                ]
+            }
+        },
+        "items": {
+            "$ref": "#/$defs/Config"
+        },
+        "type": "array"
     }
 }

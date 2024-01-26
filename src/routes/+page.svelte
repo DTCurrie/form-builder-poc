@@ -1,17 +1,11 @@
 <script lang="ts">
-	import type { JSONSchema7, JSONSchema7Definition, JSONSchema7TypeName } from 'json-schema';
+	import type { JSONSchema7Definition, JSONSchema7TypeName } from 'json-schema';
 	import SchemaFormControl from '$lib/schema-form-control.svelte';
 	import schemas from './schemas.json';
-	import { keys } from 'svelte-tweakpane-ui/ThemeUtils.js';
 
-	type Key = keyof typeof schemas;
-	const components = Object.keys(schemas) as Key[];
-	const definitions = components.map((component) => ({
-		...schemas[component as Key].$defs,
-		component
-	}));
+	type SchemaKey = keyof typeof schemas;
 
-	const getDefinitions = (component: Key) => schemas[component].$defs;
+	const getDefinitions = (key: SchemaKey) => schemas[key].$defs;
 
 	const getType = (property: JSONSchema7Definition): JSONSchema7TypeName => {
 		if (typeof property === 'boolean') {
@@ -36,9 +30,9 @@
 	documentation.
 </p>
 
-{#each components as component}
-	<h2>{component}</h2>
-	{@const definition = getDefinitions(component)}
+{#each Object.keys(schemas) as schema}
+	<h2>{schema}</h2>
+	{@const definition = getDefinitions(schema)}
 	{#each Object.keys(definition) as field}
 		<fieldset>
 			<legend>{field}</legend>
