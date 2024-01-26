@@ -1,0 +1,4383 @@
+{
+    "component-arm-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/arm/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "arm-model": {
+                        "type": "string"
+                    },
+                    "model-path": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-arm-lite6": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/arm/xarm/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "host": {
+                        "type": "string"
+                    },
+                    "port": {
+                        "type": "integer"
+                    },
+                    "speed_degs_per_sec": {
+                        "type": "number"
+                    },
+                    "acceleration_degs_per_sec_per_sec": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "host",
+                    "port",
+                    "speed_degs_per_sec",
+                    "acceleration_degs_per_sec_per_sec"
+                ]
+            }
+        }
+    },
+    "component-arm-ur5e": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/arm/universalrobots/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "speed_degs_per_sec": {
+                        "type": "number"
+                    },
+                    "host": {
+                        "type": "string"
+                    },
+                    "arm_hosted_kinematics": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "speed_degs_per_sec",
+                    "host"
+                ]
+            }
+        }
+    },
+    "component-arm-wrapper_arm": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/arm/wrapper/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "model-path": {
+                        "type": "string"
+                    },
+                    "arm-name": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "model-path",
+                    "arm-name"
+                ]
+            }
+        }
+    },
+    "component-arm-xArm6": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/arm/xarm/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "host": {
+                        "type": "string"
+                    },
+                    "port": {
+                        "type": "integer"
+                    },
+                    "speed_degs_per_sec": {
+                        "type": "number"
+                    },
+                    "acceleration_degs_per_sec_per_sec": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "host",
+                    "port",
+                    "speed_degs_per_sec",
+                    "acceleration_degs_per_sec_per_sec"
+                ]
+            }
+        }
+    },
+    "component-arm-xArm7": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/arm/xarm/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "host": {
+                        "type": "string"
+                    },
+                    "port": {
+                        "type": "integer"
+                    },
+                    "speed_degs_per_sec": {
+                        "type": "number"
+                    },
+                    "acceleration_degs_per_sec_per_sec": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "host",
+                    "port",
+                    "speed_degs_per_sec",
+                    "acceleration_degs_per_sec_per_sec"
+                ]
+            }
+        }
+    },
+    "component-audio_input-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/resource/no-native-config",
+        "$ref": "#/$defs/NoNativeConfig",
+        "$defs": {
+            "NoNativeConfig": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-audio_input-microphone": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/audioinput/microphone/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "audio_path": {
+                        "type": "string"
+                    },
+                    "audio_path_pattern": {
+                        "type": "string"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "audio_path",
+                    "audio_path_pattern",
+                    "debug"
+                ]
+            }
+        }
+    },
+    "component-base-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/resource/no-native-config",
+        "$ref": "#/$defs/NoNativeConfig",
+        "$defs": {
+            "NoNativeConfig": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-base-sensor-controlled": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/base/sensorcontrolled/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "movement_sensor": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "base": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "movement_sensor",
+                    "base"
+                ]
+            }
+        }
+    },
+    "component-base-wheeled": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/base/wheeled/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "width_mm": {
+                        "type": "integer",
+			            "editor": "slider"
+                    },
+                    "wheel_circumference_mm": {
+                        "type": "integer",
+			            "editor": "slider"
+                    },
+                    "spin_slip_factor": {
+                        "type": "number"
+                    },
+                    "left": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "right": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_mm",
+                    "wheel_circumference_mm",
+                    "left",
+                    "right"
+                ]
+            }
+        }
+    },
+    "component-board-beaglebone": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/genericlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/MCP3008AnalogConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "MCP3008AnalogConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin",
+                    "spi_bus",
+                    "chip_select"
+                ]
+            }
+        }
+    },
+    "component-board-customlinux": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/customlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "board_defs_file_path": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "board_defs_file_path"
+                ]
+            }
+        }
+    },
+    "component-board-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "AnalogReaderConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/AnalogReaderConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    },
+                    "fail_new": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "fail_new"
+                ]
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            }
+        }
+    },
+    "component-board-jetson": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/genericlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/MCP3008AnalogConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "MCP3008AnalogConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin",
+                    "spi_bus",
+                    "chip_select"
+                ]
+            }
+        }
+    },
+    "component-board-numato": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/numato/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "AnalogReaderConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/AnalogReaderConfig"
+                        },
+                        "type": "array"
+                    },
+                    "pins": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pins"
+                ]
+            }
+        }
+    },
+    "component-board-odroid": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/genericlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/MCP3008AnalogConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "MCP3008AnalogConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin",
+                    "spi_bus",
+                    "chip_select"
+                ]
+            }
+        }
+    },
+    "component-board-orangepi": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/genericlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/MCP3008AnalogConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "MCP3008AnalogConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin",
+                    "spi_bus",
+                    "chip_select"
+                ]
+            }
+        }
+    },
+    "component-board-pca9685": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/hat/pca9685/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_address": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-board-pi": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/genericlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/MCP3008AnalogConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "MCP3008AnalogConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin",
+                    "spi_bus",
+                    "chip_select"
+                ]
+            }
+        }
+    },
+    "component-board-pi5": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/genericlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/MCP3008AnalogConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "MCP3008AnalogConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin",
+                    "spi_bus",
+                    "chip_select"
+                ]
+            }
+        }
+    },
+    "component-board-ti": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/genericlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/MCP3008AnalogConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "MCP3008AnalogConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin",
+                    "spi_bus",
+                    "chip_select"
+                ]
+            }
+        }
+    },
+    "component-board-upboard": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/genericlinux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "analogs": {
+                        "items": {
+                            "$ref": "#/$defs/MCP3008AnalogConfig"
+                        },
+                        "type": "array"
+                    },
+                    "digital_interrupts": {
+                        "items": {
+                            "$ref": "#/$defs/DigitalInterruptConfig"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "DigitalInterruptConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin"
+                ]
+            },
+            "MCP3008AnalogConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "average_over_ms": {
+                        "type": "integer"
+                    },
+                    "samples_per_sec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "pin",
+                    "spi_bus",
+                    "chip_select"
+                ]
+            }
+        }
+    },
+    "component-camera-align_color_depth_extrinsics": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/align/extrinsics-config",
+        "$ref": "#/$defs/extrinsicsConfig",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            },
+            "extrinsicsConfig": {
+                "properties": {
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "camera_system": true,
+                    "output_image_type": {
+                        "type": "string"
+                    },
+                    "color_camera_name": {
+                        "type": "string"
+                    },
+                    "depth_camera_name": {
+                        "type": "string"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "intrinsic_parameters",
+                    "camera_system",
+                    "output_image_type",
+                    "color_camera_name",
+                    "depth_camera_name"
+                ]
+            }
+        }
+    },
+    "component-camera-align_color_depth_homography": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/align/homography-config",
+        "$ref": "#/$defs/homographyConfig",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            },
+            "RawDepthColorHomography": {
+                "properties": {
+                    "transform": {
+                        "items": {
+                            "type": "number"
+                        },
+                        "type": "array"
+                    },
+                    "depth_to_color": {
+                        "type": "boolean"
+                    },
+                    "rotate_depth_degs": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "transform",
+                    "depth_to_color",
+                    "rotate_depth_degs"
+                ]
+            },
+            "homographyConfig": {
+                "properties": {
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "homography": {
+                        "$ref": "#/$defs/RawDepthColorHomography"
+                    },
+                    "color_camera_name": {
+                        "type": "string"
+                    },
+                    "depth_camera_name": {
+                        "type": "string"
+                    },
+                    "output_image_type": {
+                        "type": "string"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "intrinsic_parameters",
+                    "homography",
+                    "color_camera_name",
+                    "depth_camera_name",
+                    "output_image_type"
+                ]
+            }
+        }
+    },
+    "component-camera-dual_stream": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/videosource/dual-server-config",
+        "$ref": "#/$defs/dualServerConfig",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            },
+            "dualServerConfig": {
+                "properties": {
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    },
+                    "stream": {
+                        "type": "string"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    },
+                    "color_url": {
+                        "type": "string"
+                    },
+                    "depth_url": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "stream",
+                    "color_url",
+                    "depth_url"
+                ]
+            }
+        }
+    },
+    "component-camera-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "width": {
+                        "type": "integer"
+                    },
+                    "height": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-camera-ffmpeg": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/ffmpeg/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "Config": {
+                "properties": {
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    },
+                    "video_path": {
+                        "type": "string"
+                    },
+                    "input_kw_args": {
+                        "type": "object"
+                    },
+                    "filters": {
+                        "items": {
+                            "$ref": "#/$defs/FilterConfig"
+                        },
+                        "type": "array"
+                    },
+                    "output_kw_args": {
+                        "type": "object"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "video_path"
+                ]
+            },
+            "FilterConfig": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "args": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "kw_args": {
+                        "type": "object"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "name",
+                    "args",
+                    "kw_args"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            }
+        }
+    },
+    "component-camera-image_file": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/videosource/file-source-config",
+        "$ref": "#/$defs/fileSourceConfig",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            },
+            "fileSourceConfig": {
+                "properties": {
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    },
+                    "color_image_file_path": {
+                        "type": "string"
+                    },
+                    "depth_image_file_path": {
+                        "type": "string"
+                    },
+                    "pointcloud_file_path": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-camera-join_color_depth": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/align/join-config",
+        "$ref": "#/$defs/joinConfig",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            },
+            "joinConfig": {
+                "properties": {
+                    "output_image_type": {
+                        "type": "string"
+                    },
+                    "color_camera_name": {
+                        "type": "string"
+                    },
+                    "depth_camera_name": {
+                        "type": "string"
+                    },
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "output_image_type",
+                    "color_camera_name",
+                    "depth_camera_name"
+                ]
+            }
+        }
+    },
+    "component-camera-join_pointclouds": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/videosource/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "Config": {
+                "properties": {
+                    "target_frame": {
+                        "type": "string"
+                    },
+                    "source_cameras": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "proximity_threshold_mm": {
+                        "type": "number"
+                    },
+                    "merge_method": {
+                        "type": "string"
+                    },
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "target_frame",
+                    "source_cameras"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            }
+        }
+    },
+    "component-camera-replay_pcd": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/replaypcd/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "source": {
+                        "type": "string"
+                    },
+                    "robot_id": {
+                        "type": "string"
+                    },
+                    "location_id": {
+                        "type": "string"
+                    },
+                    "organization_id": {
+                        "type": "string"
+                    },
+                    "time_interval": {
+                        "$ref": "#/$defs/TimeInterval"
+                    },
+                    "batch_size": {
+                        "type": "integer"
+                    },
+                    "api_key": {
+                        "type": "string"
+                    },
+                    "api_key_id": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "TimeInterval": {
+                "properties": {
+                    "start": {
+                        "type": "string"
+                    },
+                    "end": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-camera-rtsp": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/rtsp/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "Config": {
+                "properties": {
+                    "rtsp_address": {
+                        "type": "string"
+                    },
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rtsp_address"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            }
+        }
+    },
+    "component-camera-single_stream": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/videosource/server-config",
+        "$ref": "#/$defs/ServerConfig",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            },
+            "ServerConfig": {
+                "properties": {
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    },
+                    "stream": {
+                        "type": "string"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    },
+                    "url": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "stream",
+                    "url"
+                ]
+            }
+        }
+    },
+    "component-camera-transform": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/transform-config",
+        "$ref": "#/$defs/transformConfig",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            },
+            "Transformation": {
+                "oneOf": [
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/empty-config",
+                        "$ref": "#/$defs/emptyConfig",
+                        "$defs": {
+                            "emptyConfig": {
+                                "properties": {},
+                                "additionalProperties": false,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object",
+                        "title": "rotate",
+                        "description": "Rotate the image by 180 degrees. Used when the camera is installed upside down."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/empty-config",
+                        "$ref": "#/$defs/emptyConfig",
+                        "$defs": {
+                            "emptyConfig": {
+                                "properties": {},
+                                "additionalProperties": false,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object",
+                        "title": "depth_to_pretty",
+                        "description": "Turns a depth image source into a colorful image, with blue indicating distant points and red indicating nearby points."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/overlay-config",
+                        "$ref": "#/$defs/overlayConfig",
+                        "$defs": {
+                            "PinholeCameraIntrinsics": {
+                                "properties": {
+                                    "width_px": {
+                                        "type": "integer"
+                                    },
+                                    "height_px": {
+                                        "type": "integer"
+                                    },
+                                    "fx": {
+                                        "type": "number"
+                                    },
+                                    "fy": {
+                                        "type": "number"
+                                    },
+                                    "ppx": {
+                                        "type": "number"
+                                    },
+                                    "ppy": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "width_px",
+                                    "height_px",
+                                    "fx",
+                                    "fy",
+                                    "ppx",
+                                    "ppy"
+                                ]
+                            },
+                            "overlayConfig": {
+                                "properties": {
+                                    "intrinsic_parameters": {
+                                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "intrinsic_parameters"
+                                ]
+                            }
+                        },
+                        "type": "object",
+                        "title": "overlay",
+                        "description": "Projects a point cloud to a 2D RGB and Depth image, and overlays the two images. Used to debug the RGB+D alignment."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/depth-edges-config",
+                        "$ref": "#/$defs/depthEdgesConfig",
+                        "$defs": {
+                            "depthEdgesConfig": {
+                                "properties": {
+                                    "high_threshold_pct": {
+                                        "type": "number"
+                                    },
+                                    "low_threshold_pct": {
+                                        "type": "number"
+                                    },
+                                    "blur_radius_px": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "high_threshold_pct",
+                                    "low_threshold_pct",
+                                    "blur_radius_px"
+                                ]
+                            }
+                        },
+                        "type": "object",
+                        "title": "depth_edges",
+                        "description": "Applies a Canny edge detector to find edges. Only works on cameras that produce depth maps."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/empty-config",
+                        "$ref": "#/$defs/emptyConfig",
+                        "$defs": {
+                            "emptyConfig": {
+                                "properties": {},
+                                "additionalProperties": false,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object",
+                        "title": "identity",
+                        "description": "Does nothing to the image. Can use this to duplicate camera sources, or change the source's stream or parameters."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/resize-config",
+                        "$ref": "#/$defs/resizeConfig",
+                        "$defs": {
+                            "resizeConfig": {
+                                "properties": {
+                                    "height_px": {
+                                        "type": "integer"
+                                    },
+                                    "width_px": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "height_px",
+                                    "width_px"
+                                ]
+                            }
+                        },
+                        "type": "object",
+                        "title": "resize",
+                        "description": "Resizes the image to the specified height and width"
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/crop-config",
+                        "$ref": "#/$defs/cropConfig",
+                        "$defs": {
+                            "cropConfig": {
+                                "properties": {
+                                    "x_min_px": {
+                                        "type": "integer"
+                                    },
+                                    "y_min_px": {
+                                        "type": "integer"
+                                    },
+                                    "x_max_px": {
+                                        "type": "integer"
+                                    },
+                                    "y_max_px": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "x_min_px",
+                                    "y_min_px",
+                                    "x_max_px",
+                                    "y_max_px"
+                                ]
+                            }
+                        },
+                        "type": "object",
+                        "title": "crop",
+                        "description": "Crop the image to the specified rectangle in pixels"
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/undistort-config",
+                        "$ref": "#/$defs/undistortConfig",
+                        "$defs": {
+                            "BrownConrady": {
+                                "properties": {
+                                    "rk1": {
+                                        "type": "number"
+                                    },
+                                    "rk2": {
+                                        "type": "number"
+                                    },
+                                    "rk3": {
+                                        "type": "number"
+                                    },
+                                    "tp1": {
+                                        "type": "number"
+                                    },
+                                    "tp2": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "rk1",
+                                    "rk2",
+                                    "rk3",
+                                    "tp1",
+                                    "tp2"
+                                ]
+                            },
+                            "PinholeCameraIntrinsics": {
+                                "properties": {
+                                    "width_px": {
+                                        "type": "integer"
+                                    },
+                                    "height_px": {
+                                        "type": "integer"
+                                    },
+                                    "fx": {
+                                        "type": "number"
+                                    },
+                                    "fy": {
+                                        "type": "number"
+                                    },
+                                    "ppx": {
+                                        "type": "number"
+                                    },
+                                    "ppy": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "width_px",
+                                    "height_px",
+                                    "fx",
+                                    "fy",
+                                    "ppx",
+                                    "ppy"
+                                ]
+                            },
+                            "undistortConfig": {
+                                "properties": {
+                                    "intrinsic_parameters": {
+                                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                                    },
+                                    "distortion_parameters": {
+                                        "$ref": "#/$defs/BrownConrady"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "intrinsic_parameters",
+                                    "distortion_parameters"
+                                ]
+                            }
+                        },
+                        "type": "object",
+                        "title": "undistort",
+                        "description": "Uses intrinsics and modified Brown-Conrady parameters to undistort the source image."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/detector-config",
+                        "$ref": "#/$defs/detectorConfig",
+                        "$defs": {
+                            "detectorConfig": {
+                                "properties": {
+                                    "detector_name": {
+                                        "type": "string"
+                                    },
+                                    "confidence_threshold": {
+                                        "type": "number"
+                                    },
+                                    "valid_labels": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "detector_name",
+                                    "confidence_threshold",
+                                    "valid_labels"
+                                ]
+                            }
+                        },
+                        "type": "object",
+                        "title": "detections",
+                        "description": "Overlays object detections on the image. Can use any detector registered in the vision service."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/classifier-config",
+                        "$ref": "#/$defs/classifierConfig",
+                        "$defs": {
+                            "classifierConfig": {
+                                "properties": {
+                                    "classifier_name": {
+                                        "type": "string"
+                                    },
+                                    "confidence_threshold": {
+                                        "type": "number"
+                                    },
+                                    "max_classifications": {
+                                        "type": "integer"
+                                    },
+                                    "valid_labels": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "classifier_name",
+                                    "confidence_threshold",
+                                    "max_classifications",
+                                    "valid_labels"
+                                ]
+                            }
+                        },
+                        "type": "object",
+                        "title": "classifications",
+                        "description": "Overlays image classifications on the image. Can use any classifier registered in the vision service."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/segmenter-config",
+                        "$ref": "#/$defs/segmenterConfig",
+                        "$defs": {
+                            "segmenterConfig": {
+                                "properties": {
+                                    "segmenter_name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "type": "object",
+                                "required": [
+                                    "segmenter_name"
+                                ]
+                            }
+                        },
+                        "type": "object",
+                        "title": "segmentations",
+                        "description": "Segments the camera's point cloud. Can use any segmenter registered in the vision service."
+                    },
+                    {
+                        "$schema": "https://json-schema.org/draft/2020-12/schema",
+                        "$id": "https://go.viam.com/rdk/components/camera/transformpipeline/empty-config",
+                        "$ref": "#/$defs/emptyConfig",
+                        "$defs": {
+                            "emptyConfig": {
+                                "properties": {},
+                                "additionalProperties": false,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object",
+                        "title": "depth_preprocess",
+                        "description": "Applies some basic hole-filling and edge smoothing to a depth map."
+                    }
+                ]
+            },
+            "transformConfig": {
+                "properties": {
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "pipeline": {
+                        "items": {
+                            "$ref": "#/$defs/Transformation"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "source",
+                    "pipeline"
+                ]
+            }
+        }
+    },
+    "component-camera-ultrasonic": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/sensor/ultrasonic/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "trigger_pin": {
+                        "type": "string"
+                    },
+                    "echo_interrupt_pin": {
+                        "type": "string"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "timeout_ms": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "trigger_pin",
+                    "echo_interrupt_pin",
+                    "board"
+                ]
+            }
+        }
+    },
+    "component-camera-velodyne": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/velodyne/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "port": {
+                        "type": "integer"
+                    },
+                    "ttl_ms": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "port",
+                    "ttl_ms"
+                ]
+            }
+        }
+    },
+    "component-camera-webcam": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/camera/videosource/webcam-config",
+        "$ref": "#/$defs/WebcamConfig",
+        "$defs": {
+            "BrownConrady": {
+                "properties": {
+                    "rk1": {
+                        "type": "number"
+                    },
+                    "rk2": {
+                        "type": "number"
+                    },
+                    "rk3": {
+                        "type": "number"
+                    },
+                    "tp1": {
+                        "type": "number"
+                    },
+                    "tp2": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "rk1",
+                    "rk2",
+                    "rk3",
+                    "tp1",
+                    "tp2"
+                ]
+            },
+            "PinholeCameraIntrinsics": {
+                "properties": {
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "fx": {
+                        "type": "number"
+                    },
+                    "fy": {
+                        "type": "number"
+                    },
+                    "ppx": {
+                        "type": "number"
+                    },
+                    "ppy": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "width_px",
+                    "height_px",
+                    "fx",
+                    "fy",
+                    "ppx",
+                    "ppy"
+                ]
+            },
+            "WebcamConfig": {
+                "properties": {
+                    "intrinsic_parameters": {
+                        "$ref": "#/$defs/PinholeCameraIntrinsics"
+                    },
+                    "distortion_parameters": {
+                        "$ref": "#/$defs/BrownConrady"
+                    },
+                    "debug": {
+                        "type": "boolean"
+                    },
+                    "format": {
+                        "type": "string"
+                    },
+                    "video_path": {
+                        "type": "string"
+                    },
+                    "width_px": {
+                        "type": "integer"
+                    },
+                    "height_px": {
+                        "type": "integer"
+                    },
+                    "frame_rate": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-encoder-AMS-AS5048": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/encoder/ams/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "connection_type": {
+                        "type": "string"
+                    },
+                    "i2c_attributes": {
+                        "$ref": "#/$defs/I2CConfig"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "connection_type"
+                ]
+            },
+            "I2CConfig": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_addr": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus",
+                    "i2c_addr"
+                ]
+            }
+        }
+    },
+    "component-encoder-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/encoder/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "update_rate_msec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-encoder-incremental": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/encoder/incremental/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "pins": {
+                        "$ref": "#/$defs/Pins"
+                    },
+                    "board": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pins",
+                    "board"
+                ]
+            },
+            "Pins": {
+                "properties": {
+                    "a": {
+                        "type": "string"
+                    },
+                    "b": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "a",
+                    "b"
+                ]
+            }
+        }
+    },
+    "component-encoder-single": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/encoder/single/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "pins": {
+                        "$ref": "#/$defs/Pin"
+                    },
+                    "board": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pins",
+                    "board"
+                ]
+            },
+            "Pin": {
+                "properties": {
+                    "i": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i"
+                ]
+            }
+        }
+    },
+    "component-gantry-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/resource/no-native-config",
+        "$ref": "#/$defs/NoNativeConfig",
+        "$defs": {
+            "NoNativeConfig": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-gantry-multi-axis": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/gantry/multiaxis/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "subaxes_list": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "move_simultaneously": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "subaxes_list"
+                ]
+            }
+        }
+    },
+    "component-gantry-single-axis": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/gantry/singleaxis/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "board": {
+                        "type": "string"
+                    },
+                    "motor": {
+                        "type": "string"
+                    },
+                    "limit_pins": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "limit_pin_enabled_high": {
+                        "type": "boolean"
+                    },
+                    "length_mm": {
+                        "type": "number"
+                    },
+                    "mm_per_rev": {
+                        "type": "number"
+                    },
+                    "gantry_mm_per_sec": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "motor",
+                    "length_mm",
+                    "mm_per_rev"
+                ]
+            }
+        }
+    },
+    "component-generic-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/resource/no-native-config",
+        "$ref": "#/$defs/NoNativeConfig",
+        "$defs": {
+            "NoNativeConfig": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-gripper-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/gripper/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-gripper-robotiq": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/gripper/robotiq/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "host": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "host"
+                ]
+            }
+        }
+    },
+    "component-gripper-softrobotics": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/gripper/softrobotics/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "board": {
+                        "type": "string"
+                    },
+                    "open": {
+                        "type": "string"
+                    },
+                    "close": {
+                        "type": "string"
+                    },
+                    "power": {
+                        "type": "string"
+                    },
+                    "analog_reader": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "board",
+                    "open",
+                    "close",
+                    "power",
+                    "analog_reader"
+                ]
+            }
+        }
+    },
+    "component-input_controller-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/input/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "event_value": {
+                        "type": "number"
+                    },
+                    "callback_delay_sec": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "callback_delay_sec"
+                ]
+            }
+        }
+    },
+    "component-input_controller-gamepad": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/input/gamepad/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "dev_file": {
+                        "type": "string"
+                    },
+                    "auto_reconnect": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-input_controller-gpio": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/input/gpio/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "AxisConfig": {
+                "properties": {
+                    "control": {
+                        "type": "string"
+                    },
+                    "min": {
+                        "type": "integer"
+                    },
+                    "max": {
+                        "type": "integer"
+                    },
+                    "bidirectional": {
+                        "type": "boolean"
+                    },
+                    "deadzone": {
+                        "type": "integer"
+                    },
+                    "min_change": {
+                        "type": "integer"
+                    },
+                    "poll_hz": {
+                        "type": "number"
+                    },
+                    "invert": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "control",
+                    "min",
+                    "max",
+                    "bidirectional",
+                    "deadzone",
+                    "min_change",
+                    "poll_hz",
+                    "invert"
+                ]
+            },
+            "ButtonConfig": {
+                "properties": {
+                    "control": {
+                        "type": "string"
+                    },
+                    "invert": {
+                        "type": "boolean"
+                    },
+                    "debounce_msec": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "control",
+                    "invert",
+                    "debounce_msec"
+                ]
+            },
+            "Config": {
+                "properties": {
+                    "board": {
+                        "type": "string"
+                    },
+                    "buttons": {
+                        "patternProperties": {
+                            ".*": {
+                                "$ref": "#/$defs/ButtonConfig"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "axes": {
+                        "patternProperties": {
+                            ".*": {
+                                "$ref": "#/$defs/AxisConfig"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "board",
+                    "buttons",
+                    "axes"
+                ]
+            }
+        }
+    },
+    "component-input_controller-mux": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/input/mux/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "sources": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "sources"
+                ]
+            }
+        }
+    },
+    "component-input_controller-webgamepad": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/resource/no-native-config",
+        "$ref": "#/$defs/NoNativeConfig",
+        "$defs": {
+            "NoNativeConfig": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-motor-28byj48": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/ulnstepper/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "pins": {
+                        "$ref": "#/$defs/PinConfig"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "ticks_per_rotation": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pins",
+                    "board",
+                    "ticks_per_rotation"
+                ]
+            },
+            "PinConfig": {
+                "properties": {
+                    "in1": {
+                        "type": "string"
+                    },
+                    "in2": {
+                        "type": "string"
+                    },
+                    "in3": {
+                        "type": "string"
+                    },
+                    "in4": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "in1",
+                    "in2",
+                    "in3",
+                    "in4"
+                ]
+            }
+        }
+    },
+    "component-motor-DMC4000": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/dmc4000/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "dir_flip": {
+                        "type": "boolean"
+                    },
+                    "max_rpm": {
+                        "type": "number"
+                    },
+                    "max_acceleration_rpm_per_sec": {
+                        "type": "number"
+                    },
+                    "ticks_per_rotation": {
+                        "type": "integer"
+                    },
+                    "serial_path": {
+                        "type": "string"
+                    },
+                    "controller_axis": {
+                        "type": "string"
+                    },
+                    "home_rpm": {
+                        "type": "number"
+                    },
+                    "amplifier_gain": {
+                        "type": "integer"
+                    },
+                    "low_current": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "ticks_per_rotation",
+                    "serial_path",
+                    "controller_axis",
+                    "home_rpm",
+                    "amplifier_gain",
+                    "low_current"
+                ]
+            }
+        }
+    },
+    "component-motor-TMC5072": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/tmcstepper/tmc5072-config",
+        "$ref": "#/$defs/TMC5072Config",
+        "$defs": {
+            "PinConfig": {
+                "properties": {
+                    "en_low": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "TMC5072Config": {
+                "properties": {
+                    "pins": {
+                        "$ref": "#/$defs/PinConfig"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "max_rpm": {
+                        "type": "number"
+                    },
+                    "max_acceleration_rpm_per_sec": {
+                        "type": "number"
+                    },
+                    "ticks_per_rotation": {
+                        "type": "integer"
+                    },
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "chip_select": {
+                        "type": "string"
+                    },
+                    "index": {
+                        "type": "integer"
+                    },
+                    "sg_thresh": {
+                        "type": "integer"
+                    },
+                    "home_rpm": {
+                        "type": "number"
+                    },
+                    "cal_factor": {
+                        "type": "number"
+                    },
+                    "run_current": {
+                        "type": "integer"
+                    },
+                    "hold_current": {
+                        "type": "integer"
+                    },
+                    "hold_delay": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pins",
+                    "ticks_per_rotation",
+                    "spi_bus",
+                    "chip_select",
+                    "index"
+                ]
+            }
+        }
+    },
+    "component-motor-de-sabertooth": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/dimensionengineering/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "serial_path": {
+                        "type": "string"
+                    },
+                    "serial_baud_rate": {
+                        "type": "integer"
+                    },
+                    "serial_address": {
+                        "type": "integer"
+                    },
+                    "motor_channel": {
+                        "type": "integer"
+                    },
+                    "dir_flip": {
+                        "type": "boolean"
+                    },
+                    "controller_ramp_value": {
+                        "type": "integer"
+                    },
+                    "max_rpm": {
+                        "type": "number"
+                    },
+                    "encoder": {
+                        "type": "string"
+                    },
+                    "min_power_pct": {
+                        "type": "number"
+                    },
+                    "max_power_pct": {
+                        "type": "number"
+                    },
+                    "ticks_per_rotation": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "serial_path",
+                    "serial_address",
+                    "motor_channel"
+                ]
+            }
+        }
+    },
+    "component-motor-ezopmp": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/i2cmotors/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_addr": {
+                        "type": "integer"
+                    },
+                    "max_read_bits": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus",
+                    "i2c_addr",
+                    "max_read_bits"
+                ]
+            }
+        }
+    },
+    "component-motor-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "pins": {
+                        "$ref": "#/$defs/PinConfig"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "min_power_pct": {
+                        "type": "number"
+                    },
+                    "max_power_pct": {
+                        "type": "number"
+                    },
+                    "pwm_freq": {
+                        "type": "integer"
+                    },
+                    "encoder": {
+                        "type": "string"
+                    },
+                    "max_rpm": {
+                        "type": "number"
+                    },
+                    "ticks_per_rotation": {
+                        "type": "integer"
+                    },
+                    "direction_flip": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "PinConfig": {
+                "properties": {
+                    "dir": {
+                        "type": "string"
+                    },
+                    "pwm": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "dir",
+                    "pwm"
+                ]
+            }
+        }
+    },
+    "component-motor-gpio": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/gpio/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "pins": {
+                        "$ref": "#/$defs/PinConfig"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "min_power_pct": {
+                        "type": "number"
+                    },
+                    "max_power_pct": {
+                        "type": "number"
+                    },
+                    "pwm_freq": {
+                        "type": "integer"
+                    },
+                    "dir_flip": {
+                        "type": "boolean"
+                    },
+                    "control_config": {
+                        "$ref": "#/$defs/Config"
+                    },
+                    "encoder": {
+                        "type": "string"
+                    },
+                    "ramp_rate": {
+                        "type": "number"
+                    },
+                    "max_rpm": {
+                        "type": "number"
+                    },
+                    "ticks_per_rotation": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pins",
+                    "board"
+                ]
+            },
+            "PinConfig": {
+                "properties": {
+                    "a": {
+                        "type": "string"
+                    },
+                    "b": {
+                        "type": "string"
+                    },
+                    "dir": {
+                        "type": "string"
+                    },
+                    "pwm": {
+                        "type": "string"
+                    },
+                    "en_high": {
+                        "type": "string"
+                    },
+                    "en_low": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "a",
+                    "b",
+                    "dir",
+                    "pwm"
+                ]
+            }
+        }
+    },
+    "component-motor-gpiostepper": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/gpiostepper/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "pins": {
+                        "$ref": "#/$defs/PinConfig"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "stepper_delay_usec": {
+                        "type": "integer"
+                    },
+                    "ticks_per_rotation": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pins",
+                    "board",
+                    "ticks_per_rotation"
+                ]
+            },
+            "PinConfig": {
+                "properties": {
+                    "step": {
+                        "type": "string"
+                    },
+                    "dir": {
+                        "type": "string"
+                    },
+                    "en_high": {
+                        "type": "string"
+                    },
+                    "en_low": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "step",
+                    "dir"
+                ]
+            }
+        }
+    },
+    "component-motor-roboclaw": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/motor/roboclaw/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "serial_path": {
+                        "type": "string"
+                    },
+                    "serial_baud_rate": {
+                        "type": "integer"
+                    },
+                    "motor_channel": {
+                        "type": "integer"
+                    },
+                    "address": {
+                        "type": "integer"
+                    },
+                    "ticks_per_rotation": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "serial_path",
+                    "serial_baud_rate",
+                    "motor_channel"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-accel-adxl345": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/adxl345/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "use_alternate_i2c_address": {
+                        "type": "boolean"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "tap": {
+                        "$ref": "#/$defs/TapConfig"
+                    },
+                    "free_fall": {
+                        "$ref": "#/$defs/FreeFallConfig"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus"
+                ]
+            },
+            "FreeFallConfig": {
+                "properties": {
+                    "accelerometer_pin": {
+                        "type": "integer"
+                    },
+                    "interrupt_pin": {
+                        "type": "string"
+                    },
+                    "threshold": {
+                        "type": "number"
+                    },
+                    "time_ms": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "accelerometer_pin",
+                    "interrupt_pin"
+                ]
+            },
+            "TapConfig": {
+                "properties": {
+                    "accelerometer_pin": {
+                        "type": "integer"
+                    },
+                    "interrupt_pin": {
+                        "type": "string"
+                    },
+                    "exclude_x": {
+                        "type": "boolean"
+                    },
+                    "exclude_y": {
+                        "type": "boolean"
+                    },
+                    "exclude_z": {
+                        "type": "boolean"
+                    },
+                    "threshold": {
+                        "type": "number"
+                    },
+                    "dur_us": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "accelerometer_pin",
+                    "interrupt_pin"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-dual-gps-rtk": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/dualgps/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "first_gps": {
+                        "type": "string"
+                    },
+                    "second_gps": {
+                        "type": "string"
+                    },
+                    "offset_degrees": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "first_gps",
+                    "second_gps"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-movement_sensor-gps-nmea": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/gpsnmea/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "connection_type": {
+                        "type": "string"
+                    },
+                    "disable_nmea": {
+                        "type": "boolean"
+                    },
+                    "serial_attributes": {
+                        "$ref": "#/$defs/SerialConfig"
+                    },
+                    "i2c_attributes": {
+                        "$ref": "#/$defs/I2CConfig"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "connection_type"
+                ]
+            },
+            "I2CConfig": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_addr": {
+                        "type": "integer"
+                    },
+                    "i2c_baud_rate": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus",
+                    "i2c_addr"
+                ]
+            },
+            "SerialConfig": {
+                "properties": {
+                    "serial_path": {
+                        "type": "string"
+                    },
+                    "serial_baud_rate": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "serial_path"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-gps-nmea-rtk-pmtk": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/gpsrtkpmtk/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_addr": {
+                        "type": "integer"
+                    },
+                    "i2c_baud_rate": {
+                        "type": "integer"
+                    },
+                    "ntrip_url": {
+                        "type": "string"
+                    },
+                    "ntrip_connect_attempts": {
+                        "type": "integer"
+                    },
+                    "ntrip_mountpoint": {
+                        "type": "string"
+                    },
+                    "ntrip_password": {
+                        "type": "string"
+                    },
+                    "ntrip_username": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus",
+                    "i2c_addr",
+                    "ntrip_url"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-gps-nmea-rtk-serial": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/gpsrtkserial/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "serial_path": {
+                        "type": "string"
+                    },
+                    "serial_baud_rate": {
+                        "type": "integer"
+                    },
+                    "ntrip_url": {
+                        "type": "string"
+                    },
+                    "ntrip_connect_attempts": {
+                        "type": "integer"
+                    },
+                    "ntrip_mountpoint": {
+                        "type": "string"
+                    },
+                    "ntrip_password": {
+                        "type": "string"
+                    },
+                    "ntrip_username": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "serial_path",
+                    "ntrip_url"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-gyro-mpu6050": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/mpu6050/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "use_alt_i2c_address": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-imu-vectornav": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/imuvectornav/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "spi_bus": {
+                        "type": "string"
+                    },
+                    "spi_baud_rate": {
+                        "type": "integer"
+                    },
+                    "polling_freq_hz": {
+                        "type": "integer"
+                    },
+                    "chip_select_pin": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "spi_bus",
+                    "spi_baud_rate",
+                    "polling_freq_hz",
+                    "chip_select_pin"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-imu-wit": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/imuwit/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "serial_path": {
+                        "type": "string"
+                    },
+                    "serial_baud_rate": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "serial_path"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-imu-wit-hwt905": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/imuwit/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "serial_path": {
+                        "type": "string"
+                    },
+                    "serial_baud_rate": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "serial_path"
+                ]
+            }
+        }
+    },
+    "component-movement_sensor-merged": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/merged/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "position": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "orientation": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "compass_heading": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "linear_velocity": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "angular_velocity": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "linear_acceleration": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-movement_sensor-replay": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/replay/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "source": {
+                        "type": "string"
+                    },
+                    "robot_id": {
+                        "type": "string"
+                    },
+                    "location_id": {
+                        "type": "string"
+                    },
+                    "organization_id": {
+                        "type": "string"
+                    },
+                    "time_interval": {
+                        "$ref": "#/$defs/TimeInterval"
+                    },
+                    "batch_size": {
+                        "type": "integer"
+                    },
+                    "api_key": {
+                        "type": "string"
+                    },
+                    "api_key_id": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            },
+            "TimeInterval": {
+                "properties": {
+                    "start": {
+                        "type": "string"
+                    },
+                    "end": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-movement_sensor-wheeled-odometry": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/movementsensor/wheeledodometry/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "left_motors": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "right_motors": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "base": {
+                        "type": "string"
+                    },
+                    "time_interval_msecs": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "left_motors",
+                    "right_motors",
+                    "base"
+                ]
+            }
+        }
+    },
+    "component-power_sensor-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/powersensor/fake/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-power_sensor-ina219": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/powersensor/ina/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_addr": {
+                        "type": "integer"
+                    },
+                    "max_current_amps": {
+                        "type": "number"
+                    },
+                    "shunt_resistance": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus"
+                ]
+            }
+        }
+    },
+    "component-power_sensor-ina226": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/powersensor/ina/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_addr": {
+                        "type": "integer"
+                    },
+                    "max_current_amps": {
+                        "type": "number"
+                    },
+                    "shunt_resistance": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus"
+                ]
+            }
+        }
+    },
+    "component-power_sensor-renogy": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/powersensor/renogy/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "serial_path": {
+                        "type": "string"
+                    },
+                    "serial_baud_rate": {
+                        "type": "integer"
+                    },
+                    "modbus_id": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-sensor-bme280": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/sensor/bme280/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_addr": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus"
+                ]
+            }
+        }
+    },
+    "component-sensor-ds18b20": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/sensor/ds18b20/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "unique_id": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "unique_id"
+                ]
+            }
+        }
+    },
+    "component-sensor-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/resource/no-native-config",
+        "$ref": "#/$defs/NoNativeConfig",
+        "$defs": {
+            "NoNativeConfig": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-sensor-sensirion-sht3xd": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/sensor/sht3xd/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "i2c_bus": {
+                        "type": "string"
+                    },
+                    "i2c_addr": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "i2c_bus"
+                ]
+            }
+        }
+    },
+    "component-sensor-ultrasonic": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/sensor/ultrasonic/config",
+        "$ref": "#/$defs/Config",
+        "$defs": {
+            "Config": {
+                "properties": {
+                    "trigger_pin": {
+                        "type": "string"
+                    },
+                    "echo_interrupt_pin": {
+                        "type": "string"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "timeout_ms": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "trigger_pin",
+                    "echo_interrupt_pin",
+                    "board"
+                ]
+            }
+        }
+    },
+    "component-servo-fake": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/resource/no-native-config",
+        "$ref": "#/$defs/NoNativeConfig",
+        "$defs": {
+            "NoNativeConfig": {
+                "properties": {},
+                "additionalProperties": false,
+                "type": "object"
+            }
+        }
+    },
+    "component-servo-gpio": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/servo/gpio/servo-config",
+        "$ref": "#/$defs/servoConfig",
+        "$defs": {
+            "servoConfig": {
+                "properties": {
+                    "pin": {
+                        "type": "string",
+                        "description": "\"string\""
+                    },
+                    "board": {
+                        "type": "string",
+                        "description": "\"string\""
+                    },
+                    "min_angle_deg": {
+                        "type": "number",
+                        "description": "\"number\""
+                    },
+                    "max_angle_deg": {
+                        "type": "number",
+                        "description": "\"number\""
+                    },
+                    "starting_position_deg": {
+                        "type": "number",
+                        "description": "\"number\""
+                    },
+                    "frequency_hz": {
+                        "type": "integer",
+                        "description": "\"integer\""
+                    },
+                    "pwm_resolution": {
+                        "type": "integer",
+                        "description": "\"integer\""
+                    },
+                    "min_width_us": {
+                        "type": "integer",
+                        "description": "\"integer\""
+                    },
+                    "max_width_us": {
+                        "type": "integer",
+                        "description": "\"integer\""
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pin",
+                    "board"
+                ]
+            }
+        }
+    },
+    "component-servo-pi": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://go.viam.com/rdk/components/board/pi/common/servo-config",
+        "$ref": "#/$defs/ServoConfig",
+        "$defs": {
+            "ServoConfig": {
+                "properties": {
+                    "pin": {
+                        "type": "string"
+                    },
+                    "min": {
+                        "type": "integer"
+                    },
+                    "max": {
+                        "type": "integer"
+                    },
+                    "starting_position_degs": {
+                        "type": "number"
+                    },
+                    "hold_position": {
+                        "type": "boolean"
+                    },
+                    "board": {
+                        "type": "string"
+                    },
+                    "max_rotation_deg": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "pin",
+                    "board"
+                ]
+            }
+        }
+    }
+}
